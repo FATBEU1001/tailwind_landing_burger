@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800;1,900&family=Titan+One&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-primary bg-third text-primary;
+    }
+    .header-menu-li {
+        @apply inline-block px-5 py-10;
+    }
+    .header-menu-li-a {
+        @apply group-hover:bg-hover transition py-3 px-5 rounded-2xl;
+    }
+}
+@layer components {
+    .button-order {
+        @apply relative py-3 before:absolute before:w-full before:h-full before:bg-white before:-bottom-2 before:-right-1 before:rounded-2xl before:z-10 group-hover:before:bottom-0 group-hover:before:left-0 before:transition-all;
+    }
+    .button-order-content {
+        @apply bg-secondary xl:py-3 py-3 px-5 md:text-xl text-xs border border-white rounded-2xl relative z-20 inline-block text-white;
+    }
+
+    .button-order-2 {
+        @apply relative py-3 before:absolute before:w-full before:h-full before:bg-primary before:-bottom-2 before:-right-1 before:rounded-2xl before:z-10 group-hover:before:bottom-0 group-hover:before:left-0 before:transition-all;
+    }
+    .button-order-content-2 {
+        @apply bg-third xl:py-3 py-3 px-5 md:text-xl text-xs border-2 border-primary rounded-2xl relative z-20 inline-block text-primary;
+    }
+}
